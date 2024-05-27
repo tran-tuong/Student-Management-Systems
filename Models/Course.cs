@@ -18,6 +18,9 @@ namespace StudentManagementSystems.Models
         [StringLength(100)]
         public string Categories { get; set; }
 
+        [Required]
+        public int Quantity { get; set; }
+
         [StringLength(100)]
         public string Instructor { get; set; }
 

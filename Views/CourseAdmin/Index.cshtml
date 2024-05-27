@@ -1,0 +1,57 @@
+﻿@model IEnumerable<StudentManagementSystems.Models.Course>
+@{
+    ViewBag.Title = "Courses";
+    var nameSortParm = ViewBag.NameSortParm as string;
+    var quantitySortParm = ViewBag.QuantitySortParm as string;
+    var startDateSortParm = ViewBag.StartDateSortParm as string;
+}
+
+<h1>Courses</h1>
+
+<form asp-action="Index" method="get">
+    <p>
+        Search by name or ID: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<p>
+    <a href="@Url.Action("Create")">Create New Course</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CourseID</th>
+            <th>
+                <a href="@Url.Action("Index", new { sortOrder = nameSortParm })">Course Name</a>
+            </th>
+            <th>Categories</th>
+            <th>
+                <a href="@Url.Action("Index", new { sortOrder = quantitySortParm })">Quantity</a>
+            </th>
+            <th>Instructor</th>
+            <th>
+                <a href="@Url.Action("Index", new { sortOrder = startDateSortParm })">Start Date</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
+                <td>@Html.ActionLink(item.CourseName, "Details", new { id = item.CourseID })</td>
+                <td>@Html.DisplayFor(modelItem => item.Categories)</td>
+                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                <td>@Html.DisplayFor(modelItem => item.Instructor)</td>
+                <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.CourseID })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = item.CourseID })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

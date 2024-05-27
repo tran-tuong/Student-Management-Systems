@@ -110,3 +110,4 @@ D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.M
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.csproj.GenerateResource.cache
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.AddTableStudentAll.resources
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.ConnectUserWithStudent.resources
+D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.AddCourse.resources

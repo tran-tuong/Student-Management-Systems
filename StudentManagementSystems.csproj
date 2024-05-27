@@ -169,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CourseAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentAdminController.cs" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\202405271212109_ConnectUserWithStudent.cs" />
     <Compile Include="Migrations\202405271212109_ConnectUserWithStudent.Designer.cs">
       <DependentUpon>202405271212109_ConnectUserWithStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405271940579_AddCourse.cs" />
+    <Compile Include="Migrations\202405271940579_AddCourse.Designer.cs">
+      <DependentUpon>202405271940579_AddCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -273,6 +278,11 @@
     <Content Include="Views\StudentAdmin\Delete.cshtml" />
     <Content Include="Views\StudentAdmin\Details.cshtml" />
     <Content Include="Views\StudentAdmin\Edit.cshtml" />
+    <Content Include="Views\CourseAdmin\Index.cshtml" />
+    <Content Include="Views\CourseAdmin\Details.cshtml" />
+    <Content Include="Views\CourseAdmin\Create.cshtml" />
+    <Content Include="Views\CourseAdmin\Edit.cshtml" />
+    <Content Include="Views\CourseAdmin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405271212109_ConnectUserWithStudent.resx">
       <DependentUpon>202405271212109_ConnectUserWithStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405271940579_AddCourse.resx">
+      <DependentUpon>202405271940579_AddCourse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
