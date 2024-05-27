@@ -1,4 +1,6 @@
-﻿using StudentManagementSystems.Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
+using StudentManagementSystems.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -72,15 +74,26 @@ namespace StudentManagementSystems.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(student);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                //Create account in AspNetUsers Table
+                var user = new ApplicationUser { UserName = student.StudentEmail, Email = student.StudentEmail, PhoneNumber = student.PhoneNumber };
+                var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                var result = await userManager.CreateAsync(user, "Df123!"); // Bạn có thể tạo mật khẩu ngẫu nhiên hoặc yêu cầu người dùng nhập mật khẩu
+
+                if (result.Succeeded)
+                {
+                    db.Students.Add(student);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+
+                AddErrors(result);
             }
+
+
 
             return View(student);
         }
-
-        // GET: StudentAdmin/Edit/5
+        // GET: StudentAdmin/Edit
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -92,22 +105,47 @@ namespace StudentManagementSystems.Controllers
             {
                 return HttpNotFound();
             }
+            // Get the user associated with this student
+            var user = await db.Users.FirstOrDefaultAsync(u => u.Email == student.StudentEmail);
+            if (user != null)
+            {
+                ViewBag.Password = "Df123!"; // Default password for display purposes
+            }
             return View(student);
         }
-
-        // POST: StudentAdmin/Edit/5
+        // POST: StudentAdmin/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "StudentID,Name,DateOfBirth,StudentEmail,PhoneNumber,Address")] Student student)
+        public async Task<ActionResult> Edit([Bind(Include = "StudentID,Name,DateOfBirth,StudentEmail,PhoneNumber,Address")] Student student, string newPassword)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(student).State = EntityState.Modified;
+
+                // Update user information
+                var user = await db.Users.FirstOrDefaultAsync(u => u.Email == student.StudentEmail);
+                if (user != null)
+                {
+                    user.Email = student.StudentEmail;
+                    user.UserName = student.StudentEmail;
+                    user.PhoneNumber = student.PhoneNumber;
+
+                    if (!string.IsNullOrEmpty(newPassword))
+                    {
+                        // Generate password hash
+                        var passwordHasher = new PasswordHasher();
+                        user.PasswordHash = passwordHasher.HashPassword(newPassword);
+                    }
+
+                    db.Entry(user).State = EntityState.Modified;
+                }
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
             return View(student);
         }
+
 
         // GET: StudentAdmin/Delete/5
         public async Task<ActionResult> Delete(int? id)
@@ -130,10 +168,18 @@ namespace StudentManagementSystems.Controllers
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
             Student student = await db.Students.FindAsync(id);
+            var user = await db.Users.FirstOrDefaultAsync(u => u.Email == student.StudentEmail);
+
             db.Students.Remove(student);
+            if (user != null)
+            {
+                db.Users.Remove(user);
+            }
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+        // GET: StudentAdmin/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -146,6 +192,16 @@ namespace StudentManagementSystems.Controllers
                 return HttpNotFound();
             }
             return View(student);
+        }
+
+
+
+        private void AddErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
         }
         protected override void Dispose(bool disposing)
         {

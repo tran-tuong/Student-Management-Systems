@@ -270,9 +270,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\StudentAdmin\Index.cshtml" />
     <Content Include="Views\StudentAdmin\Create.cshtml" />
-    <Content Include="Views\StudentAdmin\Edit.cshtml" />
     <Content Include="Views\StudentAdmin\Delete.cshtml" />
     <Content Include="Views\StudentAdmin\Details.cshtml" />
+    <Content Include="Views\StudentAdmin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
