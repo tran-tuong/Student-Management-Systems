@@ -1,0 +1,18 @@
+﻿
+
+
+
+.fade_down {
+    animation: fade_down 1s ease
+}
+
+
+@keyframes fade_down {
+    0% {
+        transform: translateY(-60px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
