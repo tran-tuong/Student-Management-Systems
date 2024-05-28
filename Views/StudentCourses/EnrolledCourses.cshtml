@@ -1,0 +1,51 @@
+﻿@model IEnumerable<StudentManagementSystems.Models.Enrollment>
+
+<h2>Enrolled Courses</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.Categories)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.Instructor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Categories)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Instructor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @using (Html.BeginForm("Unenroll", "StudentCourses", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("id", item.CourseID)
+                    <input type="submit" value="Unenroll" class="btn btn-default" />
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

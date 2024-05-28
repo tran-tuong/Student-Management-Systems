@@ -1,7 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNet.Identity;
+using StudentManagementSystems.Models;
+using System;
+using System.Data.Entity;
 using System.Linq;
-using System.Web;
+using System.Net;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace StudentManagementSystems.Controllers

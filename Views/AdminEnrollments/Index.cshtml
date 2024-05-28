@@ -1,0 +1,67 @@
+﻿@model IEnumerable<StudentManagementSystems.Models.Enrollment>
+
+@{
+    ViewBag.Title = "Manage Enrollments";
+    string courseFilter = ViewBag.CourseFilter as string;
+    string studentFilter = ViewBag.StudentFilter as string;
+    string currentSort = ViewBag.CurrentSort as string;
+}
+
+<h2>Manage Enrollments</h2>
+
+<p>
+    @using (Html.BeginForm("Index", "AdminEnrollments", FormMethod.Get))
+    {
+    <p>
+        Find by course name or ID: @Html.TextBox("searchString", courseFilter)
+        <br />
+        Find by student name,email: @Html.TextBox("studentSearchString", studentFilter)
+        <input type="submit" value="Search" class="btn btn-default" />
+    </p>
+}
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.ActionLink("CourseID", "Index", new { sortOrder = ViewBag.DateSortParm, searchString = courseFilter, studentSearchString = studentFilter })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.CourseName)
+            </th>
+            <th>
+                @Html.ActionLink("Student Name", "Index", new { sortOrder = ViewBag.NameSortParm, searchString = courseFilter, studentSearchString = studentFilter })
+            </th>
+            <th>
+               Email
+            </th>
+            <th>
+                @Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm, searchString = courseFilter, studentSearchString = studentFilter })
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.StudentEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EnrollmentID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
