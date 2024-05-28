@@ -299,6 +299,7 @@
     <Content Include="Views\StudentCourses\EnrolledCourses.cshtml" />
     <Content Include="Views\AdminEnrollments\Index.cshtml" />
     <Content Include="Views\AdminEnrollments\Delete.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,6 +25,7 @@ namespace StudentManagementSystems.Controllers
 
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.QuantitySortParm = sortOrder == "Quantity" ? "quantity_desc" : "Quantity";
+            ViewBag.CoureIDSortParm = sortOrder == "CourseID" ? "courseID_desc" : "CourseID";
             ViewBag.StartDateSortParm = sortOrder == "StartDate" ? "startDate_desc" : "StartDate";
 
             switch (sortOrder)
@@ -43,6 +44,12 @@ namespace StudentManagementSystems.Controllers
                     break;
                 case "startDate_desc":
                     courses = courses.OrderByDescending(c => c.StartDate);
+                    break;
+                case "CourseID":
+                    courses = courses.OrderBy(c => c.CourseID);
+                    break;
+                case "courseID_desc":
+                    courses = courses.OrderByDescending(c => c.CourseID);
                     break;
                 default:
                     courses = courses.OrderBy(c => c.CourseName);
