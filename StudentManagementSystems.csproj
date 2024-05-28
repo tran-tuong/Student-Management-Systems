@@ -194,6 +194,14 @@
     <Compile Include="Migrations\202405271940579_AddCourse.Designer.cs">
       <DependentUpon>202405271940579_AddCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405281111568_SeedAdminUser.cs" />
+    <Compile Include="Migrations\202405281111568_SeedAdminUser.Designer.cs">
+      <DependentUpon>202405281111568_SeedAdminUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405281132243_SeedStudentAndCourseData.cs" />
+    <Compile Include="Migrations\202405281132243_SeedStudentAndCourseData.Designer.cs">
+      <DependentUpon>202405281132243_SeedStudentAndCourseData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -334,6 +342,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405271940579_AddCourse.resx">
       <DependentUpon>202405271940579_AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405281111568_SeedAdminUser.resx">
+      <DependentUpon>202405281111568_SeedAdminUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405281132243_SeedStudentAndCourseData.resx">
+      <DependentUpon>202405281132243_SeedStudentAndCourseData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

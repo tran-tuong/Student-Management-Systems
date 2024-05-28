@@ -77,7 +77,7 @@ namespace StudentManagementSystems.Controllers
                 //Create account in AspNetUsers Table
                 var user = new ApplicationUser { UserName = student.StudentEmail, Email = student.StudentEmail, PhoneNumber = student.PhoneNumber };
                 var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-                var result = await userManager.CreateAsync(user, "456");
+                var result = await userManager.CreateAsync(user, "Ab12345!");
 
                 if (result.Succeeded)
                 {

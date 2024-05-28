@@ -111,3 +111,5 @@ D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.c
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.AddTableStudentAll.resources
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.ConnectUserWithStudent.resources
 D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.AddCourse.resources
+D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.SeedAdminUser.resources
+D:\kiThuatLapTrinh\StudentManagementSystems\obj\Debug\StudentManagementSystems.Migrations.SeedStudentAndCourseData.resources

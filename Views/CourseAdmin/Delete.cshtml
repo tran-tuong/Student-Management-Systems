@@ -49,7 +49,7 @@
         </dd>
     </dl>
 
-    @using (Html.BeginForm("DeleteConfirmed", "Courses", FormMethod.Post))
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => model.CourseID)

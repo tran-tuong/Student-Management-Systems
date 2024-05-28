@@ -53,10 +53,6 @@
             @Html.DisplayFor(model => model.StartDate)
         </dd>
     </dl>
-    <form action="@Url.Action("Enroll", new { courseId = Model.CourseID })" method="post">
-        @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-primary">Enroll</button>
-    </form>
 </div>
 <div>
     <a href="@Url.Action("Index")">Back to List</a>

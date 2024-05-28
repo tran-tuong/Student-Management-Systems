@@ -29,7 +29,7 @@
             // Create default admin user
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             var adminEmail = "admin@123.com";
-            var adminPassword = "123";
+            var adminPassword = "Ab12345!";
 
             if (userManager.FindByName(adminEmail) == null)
             {
