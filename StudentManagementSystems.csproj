@@ -170,6 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminEnrollmentsController.cs" />
+    <Compile Include="Controllers\AdminHomeController.cs" />
     <Compile Include="Controllers\CourseAdminController.cs" />
     <Compile Include="Controllers\CourseStudentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -301,6 +302,7 @@
     <Content Include="Views\AdminEnrollments\Index.cshtml" />
     <Content Include="Views\AdminEnrollments\Delete.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\AdminHome\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
