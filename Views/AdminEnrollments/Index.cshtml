@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Enrollment>
 
 @{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Manage Enrollments";
     string courseFilter = ViewBag.CourseFilter as string;
     string studentFilter = ViewBag.StudentFilter as string;

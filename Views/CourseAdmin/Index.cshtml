@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Course>
 @{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Courses";
+    var courseidSortParm =   ViewBag.CoureIDSortParm as string;
     var nameSortParm = ViewBag.NameSortParm as string;
     var quantitySortParm = ViewBag.QuantitySortParm as string;
     var startDateSortParm = ViewBag.StartDateSortParm as string;
@@ -22,7 +24,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>CourseID</th>
+            <th>
+                <a href="@Url.Action("Index", new { sortOrder = courseidSortParm })">CourseID</a>
+            </th>
             <th>
                 <a href="@Url.Action("Index", new { sortOrder = nameSortParm })">Course Name</a>
             </th>

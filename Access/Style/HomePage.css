@@ -1,0 +1,85 @@
+﻿.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+    .hover-scale:hover {
+        transform: scale(1.1);
+    }
+
+.gradient-bar {
+    width: 160px;
+    height: 5px;
+    background: linear-gradient(to right, black, gray);
+    margin-top: -20px; /* Adjusts the gap between the heading and the bar */
+}
+
+.fade_down {
+    animation: fade_down 1s ease
+}
+.fade_right {
+    animation: fade_right 1s ease
+}
+.fade_left {
+    animation: fade_left 1s ease
+}
+.fade_up {
+    animation: fade_up 1s ease
+}
+.zoom_in {
+    animation: zoom_in 1s ease
+}
+@keyframes zoom_in {
+    0% {
+        opacity: 0;
+        transform: scale(.4)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes fade_down{
+    0%{
+        opacity: 0;
+        transform:  translateY(-60px)  
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) 
+    }
+}
+
+@keyframes fade_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1)
+    }
+}
+@keyframes fade_right {
+    0% {
+        opacity: 0;
+        transform: translateX(60px) scale(0.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1)
+    }
+}
+@keyframes fade_up {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1)
+    }
+}

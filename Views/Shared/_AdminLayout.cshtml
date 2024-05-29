@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Student Portal</title>
+    <title>@ViewBag.Title - Admin Panel</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -16,20 +16,20 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            <a href="#">
+            <a href="/StudentAdmin">
                 <img class="rounded-5" style="width: 30px; height: 30px; margin-right: 10px"
                      src="data:image/png;base64,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" />
             </a>
-            @Html.ActionLink("StuMS", "", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                @Html.ActionLink("StuMSAdmin", "Index", "StudentAdmin", new { area = "" }, new { @class = "navbar-brand" })
+            @*<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button>*@
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Courses", "Index", "StudentCourses", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Courses Enrolled", "EnrolledCourses", "StudentCourses", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Students", "Index", "StudentAdmin", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Courses", "Index", "CourseAdmin", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Enrollments", "Index", "AdminEnrollments", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -41,7 +41,7 @@
         <footer>
             <div style="display: flex; justify-content: space-between ">
                 <p>&copy; @DateTime.Now.Year - Student Portal</p>
-                <p>Made by ❤️ Group 1</p>
+                <p>Made by ❤️ Tran Tuong</p>
             </div>
         </footer>
     </div>

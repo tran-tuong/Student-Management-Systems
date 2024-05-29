@@ -1,15 +1,13 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Course>
 @{
     ViewBag.Title = "Courses";
+    var courseidSortParm = ViewBag.CoureIDSortParm as string;
     var nameSortParm = ViewBag.NameSortParm as string;
     var quantitySortParm = ViewBag.QuantitySortParm as string;
     var startDateSortParm = ViewBag.StartDateSortParm as string;
 }
 
-<h1>Courses</h1>
-<p>
-    @Html.ActionLink("Enrolled Courses", "EnrolledCourses")
-</p>
+<h3>Courses</h3>
 <form asp-action="Index" method="get">
     <p>
         Search by name or ID: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
@@ -21,7 +19,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>CourseID</th>
+            <th>
+                CourseID
+            </th>
             <th>
                 <a href="@Url.Action("Index", new { sortOrder = nameSortParm })">Course Name</a>
             </th>
@@ -41,7 +41,7 @@
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
-                <td>@Html.ActionLink(item.CourseName, "Details", new { id = item.CourseID })</td>
+                <td>@Html.DisplayFor(modelItem => item.CourseName)</td>
                 <td>@Html.DisplayFor(modelItem => item.Categories)</td>
                 <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
                 <td>@Html.DisplayFor(modelItem => item.Instructor)</td>

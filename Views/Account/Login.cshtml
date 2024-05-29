@@ -4,61 +4,69 @@
     ViewBag.Title = "Log in";
 }
 
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">
-                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
-                {
-                    @Html.AntiForgeryToken()
-                    <h4>Use a local account to log in.</h4>
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="row">
-                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="data:image/png;base64,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"
+                                         class="rounded-5" style="width: 100px; height:100px;margin-bottom:30px" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">🫣 We are Group 1 🎉</h4>
+                                </div>
+
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <p>Please login to your account</p>
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="form-check mb-4">
+                                        @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-check-input" })
+                                        @Html.LabelFor(m => m.RememberMe, new { @class = "form-check-label" })
+                                    </div>
+
+                                    <div class="text-center">
+                                        <input type="submit" value="Log in" class="btn btn-primary btn-block fa-lg " style="width: 50%"/>
+                                    </div>
+                                }
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 col-form-label" })
-                        <div class="col-md-10">
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <div class="checkbox">
-                                @Html.CheckBoxFor(m => m.RememberMe)
-                                @Html.LabelFor(m => m.RememberMe)
+
+                        <div class="col-lg-6 d-flex align-items-center" style="background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">There are demo account</h4>
+                                <p class="small mb-0">
+                                        <p>Student:</p>
+                                        <p>phame@vnu.edu.vn</p>
+                                        <p>nguyenb@vnu.edu.vn</p>
+                                        <p>Admin: admin@123.com</p>
+                                        <p>PW: Ab12345!</p>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <input type="submit" value="Log in" class="btn btn-outline-dark" />
-                        </div>
-                    </div>
-                    <p>
-                        @Html.ActionLink("Register as a new user", "Register")
-                    </p>
-                    @* Enable this once you have account confirmation enabled for password reset functionality
-                        <p>
-                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                        </p>*@
-                }
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-            </section>
+                </div>
+            </div>
         </div>
     </div>
-</main>
+</section>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
