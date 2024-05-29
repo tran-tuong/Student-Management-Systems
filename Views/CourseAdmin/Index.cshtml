@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Course>
 @{
-    //Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Courses";
     var courseidSortParm =   ViewBag.CoureIDSortParm as string;
-   var nameSortParm = ViewBag.NameSortParm as string;
+    var nameSortParm = ViewBag.NameSortParm as string;
     var quantitySortParm = ViewBag.QuantitySortParm as string;
     var startDateSortParm = ViewBag.StartDateSortParm as string;
 }

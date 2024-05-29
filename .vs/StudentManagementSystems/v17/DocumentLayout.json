@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\studentcourses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentcourses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\studentcourses\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentcourses\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\studentcourses\\enroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentcourses\\enroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\controllers\\coursestudentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:controllers\\coursestudentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\controllers\\courseadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:controllers\\courseadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,75 +20,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAEkAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T18:06:07.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Enroll.cshtml",
-              "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Enroll.cshtml",
-              "RelativeDocumentMoniker": "Views\\StudentCourses\\Enroll.cshtml",
-              "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Enroll.cshtml",
-              "RelativeToolTip": "Views\\StudentCourses\\Enroll.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T16:02:13.781Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourseAdminController.cs",
-              "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Controllers\\CourseAdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CourseAdminController.cs",
-              "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Controllers\\CourseAdminController.cs",
-              "RelativeToolTip": "Controllers\\CourseAdminController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T15:50:39.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\StudentCourses\\Index.cshtml",
               "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Index.cshtml",
               "RelativeToolTip": "Views\\StudentCourses\\Index.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAC0AAABFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T12:25:54.525Z",
+              "WhenOpened": "2024-05-29T06:22:51.719Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\StudentCourses\\Details.cshtml",
-              "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentCourses\\Details.cshtml",
-              "RelativeToolTip": "Views\\StudentCourses\\Details.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADkAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T12:25:19.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CourseStudentController.cs",
-              "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Controllers\\CourseStudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CourseStudentController.cs",
-              "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Controllers\\CourseStudentController.cs",
-              "RelativeToolTip": "Controllers\\CourseStudentController.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAmwGgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T15:44:00.563Z"
             }
           ]
         }
