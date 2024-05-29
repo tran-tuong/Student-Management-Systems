@@ -213,6 +213,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Access\css\style.css" />
+    <Content Include="Access\js\main.js" />
+    <Content Include="Access\Script\HomePage.js" />
+    <Content Include="Access\Style\HomePage.css" />
+    <Content Include="Access\Style\Layout.css" />
+    <Content Include="Access\Style\Student_Admin.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />

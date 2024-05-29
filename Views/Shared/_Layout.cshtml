@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SchoolManagementApp.MVC.styles.css" asp-append-version="true" />
+    <link href="~/Access/Style/HomePage.css" rel="stylesheet" />
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark fade_down">
         <div class="container">
             <a href="#">
                 <img class="rounded-5" style="width: 30px; height: 30px; margin-right: 10px"
@@ -29,7 +31,7 @@
                 <ul class="navbar-nav flex-grow-1">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Courses", "Index", "StudentCourses", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Courses Enrolled", "EnrolledCourses", "StudentCourses", new { area = "" }, new { @class = "nav-link" })</li>
+                     <li>@Html.ActionLink("Courses Enrolled", "EnrolledCourses", "StudentCourses", new { area = "" }, new { @class = "nav-link" })</li>    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -51,3 +53,5 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+

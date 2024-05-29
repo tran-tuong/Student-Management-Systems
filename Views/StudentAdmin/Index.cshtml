@@ -5,48 +5,65 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="w-100 text-center">Manage Student</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 
 <form method="get" action="@Url.Action("Index")">
-    <p>
+    <div class="row">
+        <div class="col-9">
+
+        </div>
+        <div class="col-3 ps-1">
+            <div class="form-group me-1 mb-3">
+                <div class="input-group">
+                    <input value="@ViewBag.CurrentFilter" type="text" class="form-control" placeholder="Search">
+                    <button class="btn btn-primary" type="submit" id="btn_search"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@*    <p>
         Search: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
         <input type="submit" value="Search" />
-    </p>
+    </p>*@
 </form>
 
-<table class="table">
+<table class="table table-striped table-bordered border-primary">
     <tr>
-        <th>
+        <th class="text-center">
             @Html.ActionLink("Student ID", "Index", new { sortOrder = ViewBag.IDSortParm })
         </th>
-        <th>
+        <th class="text-center">
             @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
-        <th>
+        <th class="text-center">
             @Html.ActionLink("Date of Birth", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
-        <th>
+        <th class="text-center">
             Email
         </th>
-        <th>
+        <th class="text-center">
             Phone
         </th>
-        <th>
+        <th class="text-center">
             Address
         </th>
-        <th></th>
+        <th class="text-center">
+            <button class="btn btn-success">
+                <i class="bi bi-plus-circle-fill"></i>
+                @Html.ActionLink("New student", "Create", null, new { @style = "color: white; text-decoration : none" })
+            </button>
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentID)
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.StudentID, new { @class = "text-center" })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -54,19 +71,28 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
-            <td>
+            <td align="center">
                 @Html.DisplayFor(modelItem => item.StudentEmail)
             </td>
-            <td>
+            <td align="center">
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>
-            <td>
+            <td align="center">
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.StudentID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+            <td style=" white-space: nowrap">
+                <button class="btn btn-warning">
+                    <i class="bi bi-pencil-square text-light"></i>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    @Html.ActionLink("Details", "Details", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
+                </button>
+                <button class="btn btn-danger">
+                    <i class="bi bi-trash3-fill"></i>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
+                </button>
             </td>
         </tr>
     }
