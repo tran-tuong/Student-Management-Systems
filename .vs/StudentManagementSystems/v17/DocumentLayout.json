@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\courseadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\courseadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\studentadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\courseadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\courseadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\courseadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\courseadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\courseadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\studentadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\studentadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|d:\\kithuatlaptrinh\\studentmanagementsystems\\views\\studentadmin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|D:\\kiThuatLapTrinh\\StudentManagementSystems\\views\\studentadmin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C8A50A99-6327-4156-B206-A9D8B26837AC}|StudentManagementSystems.csproj|solutionrelative:views\\studentadmin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:30:42.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:30:42.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
@@ -63,12 +62,11 @@
               "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAABMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:29:38.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:29:38.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\CourseAdmin\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\CourseAdmin\\Edit.cshtml",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "Views\\CourseAdmin\\Edit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:23:27.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:23:27.852Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "Views\\CourseAdmin\\Index.cshtml",
               "ViewState": "AQIAACoAAAAAAAAAAAAAADAAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:18:08.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:18:08.537Z"
             },
             {
               "$type": "Document",
@@ -102,18 +98,17 @@
               "RelativeToolTip": "Views\\StudentAdmin\\Create.cshtml",
               "ViewState": "AQIAADcAAAAAAAAAAAAwwEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:16:12.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:16:12.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentAdmin\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\StudentAdmin\\Edit.cshtml",
               "ToolTip": "D:\\kiThuatLapTrinh\\StudentManagementSystems\\Views\\StudentAdmin\\Edit.cshtml",
               "RelativeToolTip": "Views\\StudentAdmin\\Edit.cshtml",
-              "ViewState": "AQIAABcAAAAAAAAAAAAwwB4AAAAPAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwB4AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-30T02:13:46.927Z",
               "EditorCaption": ""
@@ -128,8 +123,7 @@
               "RelativeToolTip": "Views\\StudentAdmin\\Details.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T02:12:55.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T02:12:55.539Z"
             }
           ]
         }
