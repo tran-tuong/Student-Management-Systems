@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Course>
+
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Courses";
     var courseidSortParm = ViewBag.CoureIDSortParm as string;
     var nameSortParm = ViewBag.NameSortParm as string;
@@ -7,20 +9,44 @@
     var startDateSortParm = ViewBag.StartDateSortParm as string;
 }
 
-<h3>Courses</h3>
-<form asp-action="Index" method="get">
-    <p>
-        Search by name or ID: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
-        <input type="submit" value="Search" />
-    </p>
+<h1 class="w-100 text-center">Courses</h1>
+
+@*<form asp-action="Index" method="get" class="form-inline">
+    <div class="form-group mb-2">
+        <input type="text" name="searchString" value="@ViewBag.CurrentFilter" placeholder="Search by name or ID" class="form-control mr-2" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+</form>*@
+
+
+
+<form method="get" action="@Url.Action("Index")">
+    <div class="row">
+        <div class="col-9">
+
+        </div>
+        <div class="col-3 ps-1">
+            <div class="form-group me-1 mb-3">
+                <div class="input-group">
+                    <input value="@ViewBag.CurrentFilter" type="text" class="form-control" placeholder="Search by name or ID" name="searchString">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                    <button class="btn btn-primary" type="submit" id="btn_search"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*    <p>
+            Search: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+            <input type="submit" value="Search" />
+        </p>*@
 </form>
 
-
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>
-                CourseID
+                <a href="@Url.Action("Index", new { sortOrder = courseidSortParm })">CourseID</a>
             </th>
             <th>
                 <a href="@Url.Action("Index", new { sortOrder = nameSortParm })">Course Name</a>
@@ -33,7 +59,13 @@
             <th>
                 <a href="@Url.Action("Index", new { sortOrder = startDateSortParm })">Start Date</a>
             </th>
-            <th></th>
+            <th>
+                <p>
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <a href="@Url.Action("Create")" class="btn btn-success">Create New Course</a>
+                </p>
+
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -41,16 +73,32 @@
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
-                <td>@Html.DisplayFor(modelItem => item.CourseName)</td>
+                <td>@Html.ActionLink(item.CourseName, "Details", new { id = item.CourseID })</td>
                 <td>@Html.DisplayFor(modelItem => item.Categories)</td>
                 <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
                 <td>@Html.DisplayFor(modelItem => item.Instructor)</td>
                 <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
                 <td>
-                    @Html.ActionLink("Details", "Details", new { id = item.CourseID }) |
-                    @Html.ActionLink("Enroll", "Enroll", new { id = item.CourseID })
+                    <a href="@Url.Action("Edit", new { id = item.CourseID })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Details", new { id = item.CourseID })" class="btn btn-info">Details</a>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<style>
+    .btn {
+        margin-right: 5px;
+    }
+
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+    }
+
+    .form-inline .btn {
+        display: inline-block;
+    }
+</style>

@@ -59,14 +59,17 @@
         <div class="form-group row">
             <div class="col-md-10 offset-md-2">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <button class="btn btn-primary">
+                    @Html.ActionLink("Back to List", "Index", null, new { @style = "color: white; text-decoration : none" })
+                </button>
             </div>
         </div>
     </div>
 }
 
-<div class="mt-3">
-    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
-</div>
+
+
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
