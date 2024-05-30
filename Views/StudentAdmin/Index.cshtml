@@ -2,7 +2,7 @@
 
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Students";
 }
 
 <h2 class="w-100 text-center">Manage Student</h2>
@@ -80,19 +80,17 @@
             <td align="center">
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
-            <td style=" white-space: nowrap">
-                <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square text-light"></i>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
-                </button>
-                <button class="btn btn-primary">
-                    <i class="bi bi-exclamation-circle-fill"></i>
-                    @Html.ActionLink("Details", "Details", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
-                </button>
-                <button class="btn btn-danger">
-                    <i class="bi bi-trash3-fill"></i>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentID }, new { @style = "color: white; text-decoration : none" })
-                </button>
+
+            <td style="white-space: nowrap">
+                <a href="@Url.Action("Edit", new { id = item.StudentID })" class="btn btn-warning text-light" style="text-decoration: none;">
+                    <i class="bi bi-pencil-square"></i> Edit
+                </a>
+                <a href="@Url.Action("Details", new { id = item.StudentID })" class="btn btn-primary text-light" style="text-decoration: none;">
+                    <i class="bi bi-exclamation-circle-fill"></i> Details
+                </a>
+                <a href="@Url.Action("Delete", new { id = item.StudentID })" class="btn btn-danger text-light" style="text-decoration: none;">
+                    <i class="bi bi-trash3-fill"></i> Delete
+                </a>
             </td>
         </tr>
     }

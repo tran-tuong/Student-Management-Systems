@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<StudentManagementSystems.Models.Course>
+
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Courses";
-    var courseidSortParm =   ViewBag.CoureIDSortParm as string;
+    var courseidSortParm = ViewBag.CoureIDSortParm as string;
     var nameSortParm = ViewBag.NameSortParm as string;
     var quantitySortParm = ViewBag.QuantitySortParm as string;
     var startDateSortParm = ViewBag.StartDateSortParm as string;
@@ -10,18 +11,18 @@
 
 <h1>Courses</h1>
 
-<form asp-action="Index" method="get">
-    <p>
-        Search by name or ID: <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
-        <input type="submit" value="Search" />
-    </p>
+<form asp-action="Index" method="get" class="form-inline">
+    <div class="form-group mb-2">
+        <input type="text" name="searchString" value="@ViewBag.CurrentFilter" placeholder="Search by name or ID" class="form-control mr-2" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
 </form>
 
 <p>
-    <a href="@Url.Action("Create")">Create New Course</a>
+    <a href="@Url.Action("Create")" class="btn btn-success">Create New Course</a>
 </p>
 
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>
@@ -46,16 +47,32 @@
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
-                <td>@Html.ActionLink(item.CourseName, "Details", new { id = item.CourseID })</td>
+                <td>@Html.DisplayFor(modelItem => item.CourseName)</td>
                 <td>@Html.DisplayFor(modelItem => item.Categories)</td>
                 <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
                 <td>@Html.DisplayFor(modelItem => item.Instructor)</td>
                 <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = item.CourseID })">Edit</a> |
-                    <a href="@Url.Action("Delete", new { id = item.CourseID })">Delete</a>
+                    <a href="@Url.Action("Edit", new { id = item.CourseID })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Details", new { id = item.CourseID })" class="btn btn-info">Details</a>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<style>
+    .btn {
+        margin-right: 5px;
+    }
+
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+    }
+
+    .form-inline .btn {
+        display: inline-block;
+    }
+</style>
