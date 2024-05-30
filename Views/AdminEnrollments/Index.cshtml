@@ -28,7 +28,7 @@
         <thead>
             <tr>
                 <th class="text-center">
-                    @Html.ActionLink("CourseID", "Index", new { sortOrder = ViewBag.DateSortParm, searchString = courseFilter, studentSearchString = studentFilter } )
+                    @Html.DisplayNameFor(model => model.Course.CourseID)
                 </th>
                 <th class="text-center">
                     @Html.DisplayNameFor(model => model.Course.CourseName)

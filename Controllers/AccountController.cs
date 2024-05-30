@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using StudentManagementSystems.Models;
@@ -79,6 +80,11 @@ namespace StudentManagementSystems.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    // Check if the user is an admin
+                    if (IsUserInRole(model.Email, "admin"))
+                    {
+                        return RedirectToAction("Index", "AdminHome"); // Redirect to admin dashboard
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -88,6 +94,20 @@ namespace StudentManagementSystems.Controllers
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
+            }
+        }
+
+        //check user role
+        private bool IsUserInRole(string email, string role)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var user = context.Users.SingleOrDefault(u => u.Email == email);
+                if (user == null)
+                    return false;
+
+                var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+                return userManager.IsInRole(user.Id, role);
             }
         }
 

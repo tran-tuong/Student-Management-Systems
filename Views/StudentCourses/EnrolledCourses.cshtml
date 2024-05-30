@@ -39,7 +39,7 @@
                 {
                     @Html.AntiForgeryToken()
                     @Html.Hidden("id", item.CourseID)
-                    <input type="submit" value="Unenroll" class="btn btn-default" />
+                    <input type="submit" value="Unenroll" class="btn btn-danger" />
                 }
             </td>
         </tr>
@@ -47,5 +47,5 @@
 </table>
 
 <p>
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
 </p>
